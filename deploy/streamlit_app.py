@@ -21,7 +21,7 @@ col1, col2 = st.columns(2)
 with col1:
     if st.button("📥 Ingest Dataset"):
         try:
-            st.session_state["df"] = pd.read_csv("customer_reviews.csv")
+            st.session_state["df"] = pd.read_csv("deploy/customer_reviews.csv")
             st.success("Dataset loaded successfully!")
         except FileNotFoundError:
             st.error("Dataset not found. Please check the file path.")
